@@ -18,13 +18,58 @@ body {
   color: var(--text);
 }
 
+/* Base link style: calm, readable */
 a {
-  color: var(--link);
+  color: #374151;        /* dark gray */
+  font-weight: 500;
   text-decoration: none;
 }
 
+/* Hover: animated rainbow text */
 a:hover {
-  text-decoration: underline;
+  background: linear-gradient(
+    90deg,
+    #ef4444,
+    #f59e0b,
+    #eab308,
+    #22c55e,
+    #3b82f6,
+    #a855f7,
+    #ef4444
+  );
+  background-size: 300% 100%;
+  background-position: 0% 50%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: rainbow-text 1.5s linear infinite;
+}
+
+/* Animate gradient movement */
+@keyframes rainbow-text {
+  from { background-position:   0% 50%; }
+  to   { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a:hover {
+    animation: none;
+    background-size: 100% 100%;
+  }
+}
+
+/* Animate underline movement */
+@keyframes rainbow-underline {
+  0% {
+    background-size: 100% 2px;
+    background-position: 0 100%;
+  }
+  100% {
+    background-size: 100% 2px;
+    background-position: 100% 100%;
+  }
 }
 
 .wrap {
