@@ -21,6 +21,7 @@ The site is hosted live using GitHub Pages.
 	•	GitHub Pages for hosting
 
 ## Repository Structure
+```
 odin-recipes/
 ├── index.html
 ├── recipes/
@@ -28,6 +29,7 @@ odin-recipes/
 │   ├── recipe-2.html
 │   └── recipe-3.html
 └── README.md
+```
 
 ## Future Improvements
 - Add more recipes
